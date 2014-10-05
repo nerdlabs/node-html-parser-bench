@@ -1,33 +1,42 @@
 {
-    "name": "node-html-parser-bench",
-    "description": "Benchmark for node.js HTML5 parsers",
-    "version": "0.1.0",
-    "author": "Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin)",
-    "keywords": [
-        "node",
-        "html",
-        "parser",
-        "benchmark"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/inikulin/node-html5-parser-benchmark.git"
-    },
-    "main": "./benchmark.js",
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://raw.github.com/inikulin/parse5/master/LICENSE"
-        }
-    ],
-    "dependencies": {
-        "benchmark": "~1.0.0",
-        "html5": "*",
-        "parse5": "*",
-        "htmlparser2": "*",
-        "htmlparser " : "*"
-    },
-    "optionalDependencies": {
-        "microtime": "~0.4.0"
+  "name": "node-html-parser-bench",
+  "description": "Benchmark for node.js HTML5 parsers",
+  "version": "0.1.0",
+  "author": "Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin)",
+  "keywords": [
+    "node",
+    "html",
+    "parser",
+    "benchmark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inikulin/node-html5-parser-benchmark.git"
+  },
+  "main": "./benchmark.js",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/inikulin/parse5/master/LICENSE"
     }
+  ],
+   "scripts": {
+    "test": "node benchmark.js"
+  },
+  "dependencies": {
+    "benchmark": "~1.0.0",
+    "html5": "*",
+    "parse5": "*",
+    "htmlparser2": "*",
+    "htmlparser ": "*",
+    "html-parser": "*",
+    "sax": "*",
+    "high5": "*",
+    "gumbo-parser": "*",
+    "hubbub": "*",
+    "fast-html-parser": "*"
+  },
+  "optionalDependencies": {
+    "microtime": "~0.4.0"
+  }
 }
