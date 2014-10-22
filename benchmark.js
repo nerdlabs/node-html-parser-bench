@@ -10,7 +10,10 @@ var fs = require('fs'),
     htmlParser = require("html-parser"),
     hubbub = require('hubbub'),
     sax = require("sax"),
-    FastHTMLParser = require('fast-html-parser');
+    FastHTMLParser = require('fast-html-parser'),
+    fasthtml = require('fast-html');
+
+
 
 var dataDirPath = path.join(__dirname, './data'),
     testPages = fs.readdirSync(dataDirPath).map(function (fileName) {
@@ -94,6 +97,20 @@ new Benchmark.Suite()
     .add('fast-html-parser (https://github.com/ashi009/node-fast-html-parser)', function () {
         for (var i = 0; i < testPages.length; i++) {
             FastHTMLParser.parse(testPages[i]);
+        }
+    })
+
+    .add('fast-html (attributes object) (https://github.com/nerdlabs/fast-html)', function () {
+        for (var i = 0; i < testPages.length; i++) {
+            var parser = fasthtml({ parseAttributes: true });
+            parser.parse(testPages[i]);
+        }
+    })
+
+    .add('fast-html (attributes string) (https://github.com/nerdlabs/fast-html)', function () {
+        for (var i = 0; i < testPages.length; i++) {
+            var parser = fasthtml();
+            parser.parse(testPages[i]);
         }
     })
 

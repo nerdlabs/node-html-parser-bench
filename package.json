@@ -20,7 +20,7 @@
       "url": "https://raw.github.com/inikulin/parse5/master/LICENSE"
     }
   ],
-   "scripts": {
+  "scripts": {
     "test": "node benchmark.js"
   },
   "dependencies": {
@@ -34,7 +34,9 @@
     "high5": "*",
     "gumbo-parser": "*",
     "hubbub": "*",
-    "fast-html-parser": "*"
+    "fast-html-parser": "*",
+    "fast-html": "*",
+    "parse-attributes": "0.0.1"
   },
   "optionalDependencies": {
     "microtime": "~0.4.0"
